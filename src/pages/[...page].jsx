@@ -7,7 +7,7 @@ import { BuilderComponent, builder, useIsPreviewing, Builder } from '@builder.io
 
 // Initialize the Builder SDK with your organization's API Key
 // Find the API Key on: https://builder.io/account/settings
-builder.init('');
+builder.init(process.env.BUILDER_API_KEY);
 
 export async function getStaticProps({ params }) {
   // Fetch the first page from Builder that matches the current URL.
